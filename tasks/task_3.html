@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 3</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 3</h1>
+	</header>
+	<main>
+		<p>Задача 3. Створити окремі функції, які для 4 чисел знаходять:</p>
+		<ul>
+			<li>суму</li>
+			<li>добуток</li>
+			<li>середнє арифметичне</li>
+			<li>мінімальне значення</li>
+		</ul>
+		<h2>Розвʼязок:</h2>
+		<script>
+			function getSum(userNum1, userNum2, userNum3, userNum4) {
+				return userNum1+userNum2+userNum3+userNum4
+			}
+			function getMultiplication(userNum1, userNum2, userNum3, userNum4) {
+				return userNum1*userNum2*userNum3*userNum4
+			}
+			function getArithmeticMean(userNum1, userNum2, userNum3, userNum4) {
+				return (userNum1+userNum2+userNum3+userNum4)/4
+			}
+			function getMin(userNum1, userNum2, userNum3, userNum4) {
+				let minNum=userNum1
+				if (minNum>userNum2) {
+					minNum=userNum2
+				}
+				if (minNum>userNum3) {
+					minNum=userNum3
+				}
+				if (minNum>userNum4) {
+					minNum=userNum4
+				}
+				return minNum
+			}
+			const userNum1=parseFloat(prompt('Введіть число №1'))
+			const userNum2=parseFloat(prompt('Введіть число №2'))
+			const userNum3=parseFloat(prompt('Введіть число №3'))
+			const userNum4=parseFloat(prompt('Введіть число №4'))
+			document.write('Сума = ',getSum(userNum1, userNum2, userNum3, userNum4),'<br>')
+			document.write('Добуток = ',getMultiplication(userNum1, userNum2, userNum3, userNum4),'<br>')
+			document.write('Cереднє арифметичне = ',getArithmeticMean(userNum1, userNum2, userNum3, userNum4),'<br>')
+			document.write('Mінімальне значення = ',getMin(userNum1, userNum2, userNum3, userNum4),'<br>')
+		</script>
+	</main>
+</body>
+</html>

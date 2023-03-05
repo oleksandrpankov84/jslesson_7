@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 7</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 4</h1>
+	</header>
+	<main>
+		<p> Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість додатних, кількість більших за 100.</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			function getAmounNombers() {
+				let evenCalc=0
+				let positiveCalc=0
+				let moreThan100Calc=0
+				for (let i = 0; i < arguments.length; i++) {
+					if (arguments[i]%2===0) {
+						evenCalc++
+					} 
+					if (arguments[i]>0) {
+						positiveCalc++
+					}
+					if (arguments[i]>100) {
+					moreThan100Calc++
+				}
+				}
+				return document.write(`<p>Кількість парних чисел = ${evenCalc}</p><br><p>Кількість доданих = ${positiveCalc}</p><br><p>Кількість чисел більше за 100 = ${moreThan100Calc}</p><br>`)
+			}
+			const num1=parseFloat(prompt('Введить число №1:','1'))
+			const num2=parseFloat(prompt('Введить число №2:','1'))
+			const num3=parseFloat(prompt('Введить число №3:','1'))
+			getAmounNombers(num1,num2,num3)
+		</script>
+	</main>
+</body>
+</html>

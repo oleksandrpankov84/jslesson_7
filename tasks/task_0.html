@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 7</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 0</h1>
+	</header>
+	<main>
+		<p>Створити функцію, яка за номером місяця повертає пору року, до якої відноситься цей місяць.</p>
+		<h2>Розвʼязок</h2>
+		<script>
+			function getSeason(monthNum) {
+				let result
+				switch (monthNum) {
+					case 12:
+					case 1:
+					case 2: 
+						result='Зима'
+						break;
+					case 3:
+					case 4:
+					case 5: 
+						result='Весна'
+						break
+					case 6:
+					case 7:
+					case 8: 
+						result='Літо'
+						break
+					default: 
+						result='Осінь'
+						break;
+				}
+				return result
+			}
+			let monthNum=parseInt(prompt('Введіть намер місяцю, від 1 до 12:'))
+			document.write(getSeason(monthNum))
+		</script>
+	</main>
+</body>
+</html>

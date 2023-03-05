@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 7</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 2</h1>
+	</header>
+	<main>
+		<p>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</p>
+		<h1>Розвʼязок:</h1>
+		<script>
+			function isItWorkDay(dayNumber) {
+				return dayNumber >= 1 && dayNumber <= 5
+			}
+			const userDayNumber=parseInt(prompt('Введить номерддня тижна від 1 до 7:'))
+			const result=isItWorkDay(userDayNumber) ? 'Робочий день' : 'Вихідний'
+			document.write(result)
+		</script>
+	</main>
+</body>
+</html>

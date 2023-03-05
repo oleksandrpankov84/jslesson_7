@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 7</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 8</h1>
+	</header>
+	<main>
+		<p>Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо при кліку на зображення (тег img повине знаходитись у середині тега a: ("a img src=”шлях” /a")</p>
+		<h2>Розвʼязок:</h2>
+		<script>
+			function printBaner(imgNum,banerTitle,banerLink) {
+				let baner=`<h1>${banerTitle}</h1><br><a href="${banerLink}" target="_blank"><img src="../img/pic${imgNum}.png" alt="lottery picture"></a>`
+				return baner
+			}
+			const imgNum=parseInt(prompt('Введить номер зображення від 1 до 4','1'))
+			const banerTitle=prompt('Введить заголово для банеру','Банер')
+			const banerLink=prompt('Введить посилання для банеру:','https://www.google.com.ua/')
+			document.write(printBaner(imgNum,banerTitle,banerLink))
+		</script>
+	</main>
+</body>
+</html>

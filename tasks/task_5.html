@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ДЗ 7</title>
+</head>
+<body>
+	<header>
+		<a href="../index.html">На головну</a>
+		<h1>Задача 5</h1>
+	</header>
+	<main>
+		<p>Створити окремі функції, які переводять:</p>
+		<ul>
+			<li>Сантиметри у дюйми;</li>  
+			<li>Кілограми у фунти;</li>
+			<li>Кілометри у милі.</li>
+		</ul>
+		<h2>Розвʼязок:</h2>
+		<script>
+			// cm in inch 0.393701
+			// kg in foud 2.20462
+			// km in mile 0.621371
+			const cmInInch=0.393701
+			const kgInPound=2.20462
+			const kmInMile=0.621371
+			function getCmInInch(userCm) {
+				return userCm*cmInInch
+			}
+			function getKgInPound(userKg) {
+				return userKg*kgInPound
+			}
+			function getKmInMile(userKm) {
+				return userKm*kmInMile
+			}
+			const userCm=parseFloat(prompt('Введіть кількість см:'))
+			const userKg=parseFloat(prompt('Введіть кількість кг:'))
+			const userKm=parseFloat(prompt('Введіть кількість км:'))
+			document.write(`
+				<p>Ви ввели ${userCm}см це ${getCmInInch(userCm).toFixed(2)} дюймів</p><br>
+				<p>Ви ввели ${userKg}кг це ${getKgInPound(userKg).toFixed(2)} фунтів</p><br>
+				<p>Ви ввели ${userKm}км це ${getKmInMile(userKm).toFixed(2)} мілі</p><br>
+			`)
+		</script>
+	</main>
+</body>
+</html>
